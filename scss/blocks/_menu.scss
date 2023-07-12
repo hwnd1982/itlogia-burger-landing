@@ -1,0 +1,37 @@
+.menu {
+  flex-basis: 50%;
+
+  &__list {
+    display: flex;
+    
+    &>:not(:last-child) {
+      margin-right: 88px;
+    }
+  }
+  
+  // &__item {}
+
+  &__link {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 50%;
+      transition: .4s;
+      transform: translateX(-50%) scale(0);
+      border-bottom: 1px solid currentColor;
+    }
+    
+    &:hover {
+      color: currentColor;
+      
+      &::after {
+        color: currentColor;
+        transform: translateX(-50%) scale(1);
+      }
+    }
+  }
+}

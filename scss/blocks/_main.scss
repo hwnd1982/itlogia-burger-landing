@@ -1,0 +1,49 @@
+.main {
+  position: relative;
+  padding: 232px 0 200px;
+  margin-top: -130px;
+  background-image: url(../../images/main/main_bg.png);
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  // &__container {}
+  
+  &__info {
+    max-width: 608px;
+  }
+  
+  &__label {
+    display: block;
+    width: max-content;
+    padding: 12px 16px;
+    border-radius: 100px;
+    background-color: $prime;
+    user-select: none;
+  }
+  
+  &__title {
+    margin: 0 0 56px;
+    @include mer9;
+    font-size: 120px;
+    line-height: 130%;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+  }
+  
+  &__text {
+    font-size: 24px;
+    margin-bottom: 56px;
+  }
+  
+  &__button {
+    max-width: 260px;
+  }
+  
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 64px;
+    z-index: -1;
+  }
+}

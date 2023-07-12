@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'Gilroy Semibold';
+	src: url('../fonts/Gilroy/Gilroy-Semibold.eot');
+	src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+		url('../fonts/Gilroy/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Gilroy/Gilroy-Semibold.woff') format('woff'),
+		url('../fonts/Gilroy/Gilroy-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Merriweather Black';
+	src: url('../fonts/Merriweather/Merriweather-Black.eot');
+	src: local('Merriweather Black'), local('Merriweather-Black'),
+		url('../fonts/Merriweather/Merriweather-Black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Merriweather/Merriweather-Black.woff') format('woff'),
+		url('../fonts/Merriweather/Merriweather-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@mixin gil6 {
+	font-family: 'Gilroy Semibold', sans-serif;
+}
+
+@mixin mer9 {
+	font-family: 'Merriweather Black', sans-serif;
+}

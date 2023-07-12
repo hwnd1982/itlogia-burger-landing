@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  @include gil6;
+  font-family: Gilroy;
+  font-size: 18px;
+  line-height: normal;
+}
+
+body {
+  background-color: $bg-main;
+  color: $text-main;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: $text-main;
+  text-decoration: none;
+  
+  &:hover {
+    color: $text-main;
+  }
+}
