@@ -2,8 +2,7 @@
   position: relative;
   display: flex;
   width: 100%;
-  padding: 14px;
-  font-weight: 600;
+  @include gil6;
   justify-content: center;
   align-items: center;
   border: none;
@@ -12,6 +11,7 @@
   cursor: pointer;
   user-select: none;
   outline: $trans;
+  color: $bg-main;
   z-index: 1;
 
   &::after {

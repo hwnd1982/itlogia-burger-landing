@@ -1,13 +1,17 @@
 .main {
-  position: relative;
+  overflow: hidden;
   padding: 232px 0 200px;
   margin-top: -130px;
   background-image: url(../../images/main/main_bg.png);
   background-position: top center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
-  // &__container {}
+  
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
   
   &__info {
     max-width: 608px;
@@ -37,13 +41,14 @@
   }
   
   &__button {
+    padding: 14px;
     max-width: 260px;
   }
   
   &__image {
     position: absolute;
-    bottom: 0;
-    right: 64px;
+    top: -123px;
+    left: calc(100% - 991px);
     z-index: -1;
   }
 }

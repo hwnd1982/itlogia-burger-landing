@@ -1,0 +1,15 @@
+.footer {
+  padding: 60px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__copyright {
+    @include gil6;
+    font-size: 16px;  
+    line-height: normal;
+  }
+}

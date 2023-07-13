@@ -1,0 +1,22 @@
+.advantage {
+  text-align: center;
+  
+  &>:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__title {
+    @include gil6;
+  }
+
+  &__text {
+    @include gil6;
+    font-size: 16px;  
+    line-height: 140%;
+  }
+}

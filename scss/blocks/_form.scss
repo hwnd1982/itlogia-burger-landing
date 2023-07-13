@@ -1,0 +1,45 @@
+.form {
+  padding: 60px 40px;
+  border-radius: 16px;
+  border: 1px solid $card-border;
+  background: $card;
+  width: 100%;
+
+  &__text {
+    @include gil6;
+    font-size: 24px;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__input {
+    display: block;
+    border-radius: 9px;
+    background-image: $linear-accent;
+    padding: 1px;
+    margin-bottom: 20px;
+
+    &-item {
+      display: block;
+      width: 100%;
+      padding: 20px 10px;
+      border-radius: 8px;
+      border: none;
+      color: $text-main;
+      background: $card;
+      @include gil6;
+      font-size: 16px; 
+      line-height: 140%;
+      outline: $trans;
+      
+      &::placeholder {
+        color: $text-alt;
+      }
+    }
+  }
+  
+  &__submit {
+    padding: 20px;
+  }
+}

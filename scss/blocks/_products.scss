@@ -1,0 +1,33 @@
+.products {
+  position: relative;
+  padding: 0 0 180px;
+  z-index: 1;
+  
+  &__decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    &-background {
+      position: sticky;
+      top: 0;
+      transform: translateY(-10%);
+      max-width: 1470px;
+      margin: 0 auto;
+      padding-bottom: 100%;
+      background-image: url(../../images/burgers/burgers_bg.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
+    gap: 24px;
+  }
+}

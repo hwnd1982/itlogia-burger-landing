@@ -1,0 +1,51 @@
+.product {
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid $card-border;
+  background: $card;
+
+  &>:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  
+  &__title {
+    @include gil6;
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  &__description {
+    @include gil6;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  &__extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__price {
+    @include gil6;
+    font-size: 32px;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+
+  &__weight {
+    @include gil3;
+    font-size: 16px;
+    line-height: normal;
+    color: $text-alt;
+  }
+
+  &__button {
+    padding: 19px;
+    max-width: 182px;
+
+    &>:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

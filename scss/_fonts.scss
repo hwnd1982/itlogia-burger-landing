@@ -10,6 +10,17 @@
 }
 
 @font-face {
+	font-family: 'Gilroy Light';
+	src: url('../fonts/Gilroy/Gilroy-Light.eot');
+	src: local('Gilroy Light'), local('Gilroy-Light'),
+		url('../fonts/Gilroy/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Gilroy/Gilroy-Light.woff') format('woff'),
+		url('../fonts/Gilroy/Gilroy-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'Merriweather Black';
 	src: url('../fonts/Merriweather/Merriweather-Black.eot');
 	src: local('Merriweather Black'), local('Merriweather-Black'),
@@ -18,6 +29,10 @@
 		url('../fonts/Merriweather/Merriweather-Black.ttf') format('truetype');
 	font-weight: 900;
 	font-style: normal;
+}
+
+@mixin gil3 {
+	font-family: 'Gilroy Light', sans-serif;
 }
 
 @mixin gil6 {

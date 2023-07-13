@@ -316,6 +316,13 @@ template {
   font-style: normal;
 }
 @font-face {
+  font-family: "Gilroy Light";
+  src: url("../fonts/Gilroy/Gilroy-Light.eot");
+  src: local("Gilroy Light"), local("Gilroy-Light"), url("../fonts/Gilroy/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
   font-family: "Merriweather Black";
   src: url("../fonts/Merriweather/Merriweather-Black.eot");
   src: local("Merriweather Black"), local("Merriweather-Black"), url("../fonts/Merriweather/Merriweather-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Merriweather/Merriweather-Black.woff") format("woff"), url("../fonts/Merriweather/Merriweather-Black.ttf") format("truetype");
@@ -363,8 +370,7 @@ a:hover {
   position: relative;
   display: flex;
   width: 100%;
-  padding: 14px;
-  font-weight: 600;
+  font-family: "Gilroy Semibold", sans-serif;
   justify-content: center;
   align-items: center;
   border: none;
@@ -376,6 +382,7 @@ a:hover {
       -ms-user-select: none;
           user-select: none;
   outline: rgba(255, 255, 255, 0);
+  color: #191411;
   z-index: 1;
 }
 .button::after {
@@ -392,6 +399,16 @@ a:hover {
 }
 .button:hover::after {
   opacity: 0;
+}
+
+.title {
+  font-family: "Merriweather Black", sans-serif;
+  font-size: 64px;
+  line-height: normal;
+  letter-spacing: 1.92px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .header {
@@ -460,13 +477,17 @@ a:hover {
 }
 
 .main {
-  position: relative;
+  overflow: hidden;
   padding: 232px 0 200px;
   margin-top: -130px;
   background-image: url(../../images/main/main_bg.png);
   background-position: top center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  z-index: 1;
+}
+.main__container {
+  position: relative;
   z-index: 1;
 }
 .main__info {
@@ -498,11 +519,204 @@ a:hover {
   margin-bottom: 56px;
 }
 .main__button {
+  padding: 14px;
   max-width: 260px;
 }
 .main__image {
   position: absolute;
-  bottom: 0;
-  right: 64px;
+  top: -123px;
+  left: calc(100% - 991px);
   z-index: -1;
+}
+
+.why {
+  padding: 0 0 180px;
+  background-image: url(../../images/why/whybg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.why__list {
+  display: grid;
+  gap: 8.3333333333%;
+  grid-template-columns: repeat(auto-fill, 312px);
+  justify-content: center;
+}
+
+.advantage {
+  text-align: center;
+}
+.advantage > :not(:last-child) {
+  margin-bottom: 24px;
+}
+.advantage__icon {
+  width: 100px;
+  height: 100px;
+}
+.advantage__title {
+  font-family: "Gilroy Semibold", sans-serif;
+}
+.advantage__text {
+  font-family: "Gilroy Semibold", sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.products {
+  position: relative;
+  padding: 0 0 180px;
+  z-index: 1;
+}
+.products__decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.products__decoration-background {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  transform: translateY(-10%);
+  max-width: 1470px;
+  margin: 0 auto;
+  padding-bottom: 100%;
+  background-image: url(../../images/burgers/burgers_bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
+  gap: 24px;
+}
+
+.product {
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #353535;
+  background: #211A16;
+}
+.product > :not(:last-child) {
+  margin-bottom: 24px;
+}
+.product__title {
+  font-family: "Gilroy Semibold", sans-serif;
+  font-size: 24px;
+  line-height: normal;
+}
+.product__description {
+  font-family: "Gilroy Semibold", sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+}
+.product__extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.product__price {
+  font-family: "Gilroy Semibold", sans-serif;
+  font-size: 32px;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+.product__weight {
+  font-family: "Gilroy Light", sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  color: #757575;
+}
+.product__button {
+  padding: 19px;
+  max-width: 182px;
+}
+.product__button > :not(:last-child) {
+  margin-right: 10px;
+}
+
+.order {
+  padding: 0 0 180px;
+  background-image: url(../../images/order/order_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+.order__container {
+  position: relative;
+  z-index: 1;
+}
+.order__image {
+  position: absolute;
+  top: 0;
+  right: calc(100% - 764px);
+  z-index: -1;
+}
+.order__form {
+  max-width: 426px;
+  margin: 0 102px 0 auto;
+}
+
+.form {
+  padding: 60px 40px;
+  border-radius: 16px;
+  border: 1px solid #353535;
+  background: #211A16;
+  width: 100%;
+}
+.form__text {
+  font-family: "Gilroy Semibold", sans-serif;
+  font-size: 24px;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.form__input {
+  display: block;
+  border-radius: 9px;
+  background-image: linear-gradient(135deg, #DA8023 0%, #E2B438 100%);
+  padding: 1px;
+  margin-bottom: 20px;
+}
+.form__input-item {
+  display: block;
+  width: 100%;
+  padding: 20px 10px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background: #211A16;
+  font-family: "Gilroy Semibold", sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  outline: rgba(255, 255, 255, 0);
+}
+.form__input-item::-moz-placeholder {
+  color: #757575;
+}
+.form__input-item:-ms-input-placeholder {
+  color: #757575;
+}
+.form__input-item::placeholder {
+  color: #757575;
+}
+.form__submit {
+  padding: 20px;
+}
+
+.footer {
+  padding: 60px 0;
+}
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__copyright {
+  font-family: "Gilroy Semibold", sans-serif;
+  font-size: 16px;
+  line-height: normal;
 }/*# sourceMappingURL=style.css.map */

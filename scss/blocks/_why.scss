@@ -1,0 +1,14 @@
+.why {
+  padding: 0 0 180px;
+  background-image: url(../../images/why/whybg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__list {
+    display: grid;
+    gap: calc(1 / 12 * 100%);
+    grid-template-columns: repeat(auto-fill, 312px);
+    justify-content: center;
+  }
+}
