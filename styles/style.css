@@ -480,7 +480,7 @@ a:hover {
   overflow: hidden;
   padding: 232px 0 200px;
   margin-top: -130px;
-  background-image: url(../../images/main/main_bg.png);
+  background-image: url(../images/main/main_bg.png);
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -531,7 +531,7 @@ a:hover {
 
 .why {
   padding: 0 0 180px;
-  background-image: url(../../images/why/whybg.png);
+  background-image: url(../images/why/whybg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -583,7 +583,7 @@ a:hover {
   max-width: 1470px;
   margin: 0 auto;
   padding-bottom: 100%;
-  background-image: url(../../images/burgers/burgers_bg.png);
+  background-image: url(../images/burgers/burgers_bg.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -640,7 +640,7 @@ a:hover {
 
 .order {
   padding: 0 0 180px;
-  background-image: url(../../images/order/order_bg.png);
+  background-image: url(../images/order/order_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
