@@ -28,6 +28,8 @@
   }
 
   &:hover {
+    color: $bg-main;
+    
     &::after {
       opacity: 0;
     }

@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  position: relative;
   background-color: $bg-main;
   color: $text-main;
   box-sizing: border-box;
@@ -28,4 +29,8 @@ a {
   &:hover {
     color: $text-main;
   }
+}
+
+.hidden {
+  display: none;
 }

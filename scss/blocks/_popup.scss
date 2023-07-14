@@ -1,0 +1,54 @@
+.popup {
+  position: sticky;
+  top: 50vh;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid $card-border;
+  background: $card;
+  width: 100%;
+  max-width: 320px;
+  transform: translateY(calc(-50vh - 105%));
+  transition: .4s;
+  transition-delay: 0s;
+
+  &._show {
+    opacity: 1;
+    transform: translateY(-75%);
+    transition-delay: .4s;
+  }
+
+  &__title {
+    @include gil6;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  &__order {
+    &-list {
+      padding: 0 0 0 24px;
+      @include gil3;
+      font-size: 14px;
+      margin-bottom: 24px;
+
+      &>:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+    
+    &-item {
+  
+      &::before {
+        content: ' - ';
+      }
+    }
+  }
+
+  &__message {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__cloce {
+    padding: 14px;
+  }
+}

@@ -343,6 +343,7 @@ html {
 }
 
 body {
+  position: relative;
   background-color: #191411;
   color: #fff;
   box-sizing: border-box;
@@ -358,6 +359,10 @@ a {
 }
 a:hover {
   color: #fff;
+}
+
+.hidden {
+  display: none;
 }
 
 .container {
@@ -397,6 +402,9 @@ a:hover {
   background-image: linear-gradient(135deg, #DA8023 0%, #E2B438 100%);
   transition: 0.4s;
 }
+.button:hover {
+  color: #191411;
+}
 .button:hover::after {
   opacity: 0;
 }
@@ -423,7 +431,9 @@ a:hover {
 }
 .header__currency {
   display: flex;
-  padding: 12px 17px 11px 18px;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
   justify-content: center;
   align-items: center;
   font-weight: 600;
@@ -530,7 +540,7 @@ a:hover {
 }
 
 .why {
-  padding: 0 0 180px;
+  padding: 90px 0;
   background-image: url(../images/why/whybg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -564,7 +574,7 @@ a:hover {
 
 .products {
   position: relative;
-  padding: 0 0 180px;
+  padding: 90px 0;
   z-index: 1;
 }
 .products__decoration {
@@ -579,12 +589,12 @@ a:hover {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  transform: translateY(-10%);
+  transform: translateY(-7.5%);
   max-width: 1470px;
   margin: 0 auto;
-  padding-bottom: 100%;
+  padding-bottom: max(100%, 1470px);
   background-image: url(../images/burgers/burgers_bg.png);
-  background-size: contain;
+  background-size: 1470px 1470px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -639,7 +649,7 @@ a:hover {
 }
 
 .order {
-  padding: 0 0 180px;
+  padding: 90px 0;
   background-image: url(../images/order/order_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -708,7 +718,7 @@ a:hover {
 }
 
 .footer {
-  padding: 60px 0;
+  padding: 150px 0 60px;
 }
 .footer__container {
   display: flex;
@@ -719,4 +729,80 @@ a:hover {
   font-family: "Gilroy Semibold", sans-serif;
   font-size: 16px;
   line-height: normal;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -99;
+  transition-duration: 0.4s, 0s;
+  transition-delay: 0s, 0.4s;
+  transition-property: all, z-index;
+}
+.overlay._active {
+  transition-delay: 0.4s, 0s;
+  z-index: 99;
+  opacity: 1;
+}
+.overlay::after {
+  position: absolute;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6666666667);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.popup {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50vh;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #353535;
+  background: #211A16;
+  width: 100%;
+  max-width: 320px;
+  transform: translateY(calc(-50vh - 105%));
+  transition: 0.4s;
+  transition-delay: 0s;
+}
+.popup._show {
+  opacity: 1;
+  transform: translateY(-75%);
+  transition-delay: 0.4s;
+}
+.popup__title {
+  font-family: "Gilroy Semibold", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.popup__order-list {
+  padding: 0 0 0 24px;
+  font-family: "Gilroy Light", sans-serif;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.popup__order-list > :not(:last-child) {
+  margin-bottom: 5px;
+}
+.popup__order-item::before {
+  content: " - ";
+}
+.popup__message {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.popup__cloce {
+  padding: 14px;
 }/*# sourceMappingURL=style.css.map */

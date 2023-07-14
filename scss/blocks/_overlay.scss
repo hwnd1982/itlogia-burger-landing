@@ -1,0 +1,32 @@
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -99;
+  transition-duration: .4s, 0s;
+  transition-delay: 0s, .4s;
+  transition-property: all, z-index;
+
+  &._active {
+    transition-delay: .4s, 0s;
+    z-index: 99;
+    opacity: 1;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: #000a;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}

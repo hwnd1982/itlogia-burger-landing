@@ -9,7 +9,7 @@
     <link rel="preload" href="./fonts/Gilroy/Gilroy-Semibold.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="./fonts/Merriweather/Merriweather-Black.woff2" as="font" type="font/woff2" />
     <link rel="stylesheet" href="styles/style.css" />
-    <script src="scripts/index.js" type="module"></script>
+    <script src="scripts/script.js" type="module"></script>
   </head>
   <body>
     <header class="header">
@@ -22,17 +22,23 @@
         <nav class="menu header__menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a href="#" class="menu__link">Почему у нас</a>
+              <a href="#why" class="menu__link nav-link">Почему у нас</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Меню бургеров</a>
+              <a href="#products" class="menu__link nav-link">Меню бургеров</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Оформление заказа</a>
+              <a href="#order" class="menu__link nav-link">Оформление заказа</a>
             </li>
           </ul>
         </nav>
-        <button type="button" title="Изменить валюту" aria-label="Кнопка: Переключения валюты" class="header__currency">
+        <button
+          id="change-currency"
+          type="button"
+          title="Изменить валюту"
+          aria-label="Кнопка: Переключения валюты"
+          class="header__currency"
+        >
           $
         </button>
       </div>
@@ -48,13 +54,13 @@
               Мы&nbsp;обновили наше меню, спешите попробовать сезонные новинки и&nbsp;насладиться отличным вкусом наших
               бургеров. Готовим для вас лучшие бургеры в&nbsp;городе из&nbsp;отборной мраморной говядины.
             </p>
-            <button type="button" class="button main__button">Смотреть меню</button>
+            <a href="#products" type="button" class="button main__button nav-link">Смотреть меню</a>
           </div>
           <img class="main__image" src="./images/main/main-burger.png" alt="Бургер Чеддер" />
         </div>
       </section>
       <!-- .main -->
-      <section class="why">
+      <section id="why" class="why">
         <div class="container why__container">
           <h2 class="title why__title">почему нас выбирают?</h2>
           <ul class="why__list">
@@ -86,7 +92,7 @@
         </div>
       </section>
       <!-- .why -->
-      <section class="products">
+      <section id="products" class="products">
         <div class="products__decoration">
           <div class="products__decoration-background"></div>
         </div>
@@ -103,7 +109,7 @@
               </p>
               <div class="product__extra">
                 <div class="product__info">
-                  <p class="product__price">8 $</p>
+                  <p class="product__price" data-base-price="8">8 $</p>
                   <p class="product__weight">360 гр</p>
                 </div>
                 <button class="button product__button" type="button">
@@ -125,7 +131,7 @@
               </p>
               <div class="product__extra">
                 <div class="product__info">
-                  <p class="product__price">7 $</p>
+                  <p class="product__price" data-base-price="7">7 $</p>
                   <p class="product__weight">390 гр</p>
                 </div>
                 <button class="button product__button" type="button">
@@ -147,7 +153,7 @@
               </p>
               <div class="product__extra">
                 <div class="product__info">
-                  <p class="product__price">10 $</p>
+                  <p class="product__price" data-base-price="10">10 $</p>
                   <p class="product__weight">420 гр</p>
                 </div>
                 <button class="button product__button" type="button">
@@ -169,7 +175,7 @@
               </p>
               <div class="product__extra">
                 <div class="product__info">
-                  <p class="product__price">7 $</p>
+                  <p class="product__price" data-base-price="7">7 $</p>
                   <p class="product__weight">220 гр</p>
                 </div>
                 <button class="button product__button" type="button">
@@ -191,7 +197,7 @@
               </p>
               <div class="product__extra">
                 <div class="product__info">
-                  <p class="product__price">8 $</p>
+                  <p class="product__price" data-base-price="8">8 $</p>
                   <p class="product__weight">220 гр</p>
                 </div>
                 <button class="button product__button" type="button">
@@ -213,7 +219,7 @@
               </p>
               <div class="product__extra">
                 <div class="product__info">
-                  <p class="product__price">9 $</p>
+                  <p class="product__price" data-base-price="9">9 $</p>
                   <p class="product__weight">320 гр</p>
                 </div>
                 <button class="button product__button" type="button">
@@ -235,7 +241,7 @@
               </p>
               <div class="product__extra">
                 <div class="product__info">
-                  <p class="product__price">8 $</p>
+                  <p class="product__price" data-base-price="8">8 $</p>
                   <p class="product__weight">280 гр</p>
                 </div>
                 <button class="button product__button" type="button">
@@ -257,7 +263,7 @@
               </p>
               <div class="product__extra">
                 <div class="product__info">
-                  <p class="product__price">7 $</p>
+                  <p class="product__price" data-base-price="7">7 $</p>
                   <p class="product__weight">380 гр</p>
                 </div>
                 <button class="button product__button" type="button">
@@ -279,7 +285,7 @@
               </p>
               <div class="product__extra">
                 <div class="product__info">
-                  <p class="product__price">11 $</p>
+                  <p class="product__price" data-base-price="11">11 $</p>
                   <p class="product__weight">400 гр</p>
                 </div>
                 <button class="button product__button" type="button">
@@ -301,7 +307,7 @@
               </p>
               <div class="product__extra">
                 <div class="product__info">
-                  <p class="product__price">9 $</p>
+                  <p class="product__price" data-base-price="9">9 $</p>
                   <p class="product__weight">300 гр</p>
                 </div>
                 <button class="button product__button" type="button">
@@ -323,7 +329,7 @@
               </p>
               <div class="product__extra">
                 <div class="product__info">
-                  <p class="product__price">8 $</p>
+                  <p class="product__price" data-base-price="8">8 $</p>
                   <p class="product__weight">320 гр</p>
                 </div>
                 <button class="button product__button" type="button">
@@ -345,7 +351,7 @@
               </p>
               <div class="product__extra">
                 <div class="product__info">
-                  <p class="product__price">9 $</p>
+                  <p class="product__price" data-base-price="9">9 $</p>
                   <p class="product__weight">360 гр</p>
                 </div>
                 <button class="button product__button" type="button">
@@ -360,20 +366,20 @@
         </div>
       </section>
       <!-- .products -->
-      <section class="order">
+      <section id="order" class="order">
         <div class="container order__container">
           <h2 class="title order__title">оформление заказа</h2>
           <img src="./images/order/order_image.png" alt="Ваш заказ" class="order__image" />
-          <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="form order__form">
+          <form name="order" action="https://jsonplaceholder.typicode.com/posts" method="post" class="form order__form">
             <p class="form__text">Заполните все данные и наш менеджер свяжется с вами для подтверждения заказа</p>
             <label class="form__input">
-              <input type="text" class="form__input-item" placeholder="Ваш заказ" required />
+              <input type="text" name="burgers" class="form__input-item" placeholder="Ваш заказ" required />
             </label>
             <label class="form__input">
-              <input type="text" class="form__input-item" placeholder="Ваше имя" required />
+              <input type="text" name="name" class="form__input-item" placeholder="Ваше имя" required />
             </label>
             <label class="form__input">
-              <input type="text" class="form__input-item" placeholder="Ваш телефон" required />
+              <input type="tel" name="phone" class="form__input-item" placeholder="Ваш телефон" required />
             </label>
             <button class="button form__submit" type="submit">Оформить заказ</button>
           </form>
@@ -453,5 +459,14 @@
         />
       </symbol>
     </svg>
+
+    <div class="overlay">
+      <div id="order-is-processed" class="popup">
+        <p class="popup__title"><span class="popup__name"></span>, спасибо за заказ!</p>
+        <ul class="popup__order-list"></ul>
+        <p class="popup__message">В ближайшее время наш менеджер свяжется с Вами.</p>
+        <button class="popup__cloce button" type="button">Ок</button>
+      </div>
+    </div>
   </body>
 </html>
